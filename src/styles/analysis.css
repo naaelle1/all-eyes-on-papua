@@ -1,0 +1,17 @@
+/* Document/Archive card simulation background pattern */
+.archive-card-grain {
+  position: relative;
+}
+.archive-card-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url('https://www.transparenttextures.com/patterns/lined-paper.png');
+}
+
+/* Subtle pulse text effect */
+.glowing-resistance-text {
+  text-shadow: 0 0 10px rgba(179, 58, 58, 0.4);
+}
