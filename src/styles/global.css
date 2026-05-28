@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  html {
+    background-color: #080808;
+    color: #F2EEE6;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A1B14;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4B0F0F;
+  }
+}
+
+/* Base Utility for Grayscale Cinematic Images */
+.cinematic-img {
+  filter: grayscale(100%) contrast(110%) brightness(75%);
+  mix-blend-mode: luminosity;
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cinematic-img:hover {
+  filter: grayscale(30%) contrast(100%) brightness(85%);
+}
