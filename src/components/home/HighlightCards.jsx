@@ -7,19 +7,19 @@ const cards = [
     title: "Janji Otonomi Khusus",
     desc: "Retorika proteksi hak adat dan otonomi politik penuh yang terbentur dinding realisasi praktis.",
     icon: ShieldCheck,
-    img: "public\\images\\janji otonomi khusus.jpeg"
+    img: "/images/janji otonomi khusus.jpeg"
   },
   {
     title: "Konflik Hutan Adat",
     desc: "Hutan hujan Boven Digoel dibabat habis demi bentangan perkebunan sawit skala korporasi raksasa.",
     icon: Trees,
-    img: "public\\images\\konflik hutan 2.jpeg"
+    img: "/images/konflik hutan 2.jpeg"
   },
   {
     title: "Solidaritas Digital",
     desc: "Ketika ribuan suara organik bersatu di jejaring digital meneriakkan satu pesan kolektif.",
     icon: Share2,
-    img: "public\\images\\solidaritas digital.jpeg"
+    img: "/images/solidaritas digital.jpeg"
   }
 ];
 
