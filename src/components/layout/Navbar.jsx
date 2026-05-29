@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,16 +39,22 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-12 items-center">
           {menuItems.map((item) => (
-            <Link 
+            <NavLink 
               key={item.name} 
               to={item.path}
-              className={`text-[10px] md:text-[11px] uppercase tracking-[0.2em] transition-colors duration-500 relative group py-2 
-                ${location.pathname === item.path ? 'text-paper-beige' : 'text-soft-white/60 hover:text-paper-beige'}`}
+              className={({ isActive }) => 
+                `text-[10px] md:text-[11px] uppercase tracking-[0.2em] transition-colors duration-500 relative group py-2 
+                ${isActive ? 'text-paper-beige' : 'text-soft-white/60 hover:text-paper-beige'}`
+              }
             >
-              {item.name}
-              <span className={`absolute bottom-0 left-0 h-px transition-all duration-500 
-                ${location.pathname === item.path ? 'w-full bg-paper-beige' : 'w-0 bg-paper-beige/50 group-hover:w-full'}`} />
-            </Link>
+              {({ isActive }) => (
+                <>
+                  {item.name}
+                  <span className={`absolute bottom-0 left-0 h-px transition-all duration-500 
+                    ${isActive ? 'w-full bg-paper-beige' : 'w-0 bg-paper-beige/50 group-hover:w-full'}`} />
+                </>
+              )}
+            </NavLink>
           ))}
         </div>
 
@@ -58,21 +65,33 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/5 py-8 px-8 flex flex-col space-y-6">
-          {menuItems.map((item) => (
-            <Link 
-              key={item.name} 
-              to={item.path}
-              onClick={() => setIsOpen(false)}
-              className={`text-xs uppercase tracking-[0.2em] transition-colors font-light
-                ${location.pathname === item.path ? 'text-paper-beige' : 'text-soft-white/60 hover:text-paper-beige'}`}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute top-full left-0 w-full overflow-hidden bg-black/95 backdrop-blur-xl border-b border-white/5"
+          >
+            <div className="py-8 px-8 flex flex-col space-y-6">
+              {menuItems.map((item) => (
+                <NavLink 
+                  key={item.name} 
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `text-xs uppercase tracking-[0.2em] transition-colors font-light
+                    ${isActive ? 'text-paper-beige' : 'text-soft-white/60 hover:text-paper-beige'}`
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

@@ -10,6 +10,7 @@ import Analysis from './pages/Analysis';
 import Archive from './pages/Archive';
 import Forum from './pages/Forum';
 import GrainOverlay from './components/ui/GrainOverlay';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="relative min-h-screen bg-pri-bg text-soft-white selection:bg-blood-red selection:text-white">
         {/* Grain Texture Applied Everywhere */}
         <GrainOverlay />
