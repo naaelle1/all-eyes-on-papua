@@ -11,9 +11,9 @@ export default function ComparisonHero() {
           <img 
             src="/images/papua-dulu.jpg" 
             alt="Historical Reform Archive" 
-            className="w-full h-full object-cover opacity-20 filter grayscale sepia contrast-110 mix-blend-luminosity"
+            className="w-full h-full object-cover opacity-60 filter grayscale sepia contrast-110"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-[#111111] via-[#111111]/60 to-black/90" />
+          <div className="absolute inset-0 bg-linear-to-t from-transparent via-[#111111]/20 to-black/30 pointer-events-none" />
         </div>
 
         {/* Right Side Visual (Industrial Cold Content) */}
@@ -21,9 +21,9 @@ export default function ComparisonHero() {
           <img 
             src="/images/papua-sekarang.jpg" 
             alt="Deforestation / Industrial Landscape" 
-            className="w-full h-full object-cover opacity-15 filter grayscale contrast-125 brightness-50"
+            className="w-full h-full object-cover opacity-60 filter grayscale contrast-125 brightness-50"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-[#080808] via-[#080808]/70 to-black/90" />
+          <div className="absolute inset-0 bg-linear-to-t from-transparent via-[#080808]/20 to-black/30 pointer-events-none" />
         </div>
       </div>
 
