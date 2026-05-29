@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 export default function SectionTitle({ label, title, center = false }) {
   return (
-    <div className={`mb-16 ${center ? 'text-center' : 'text-left'}`}>
+    <div className={`mb-16 ${center ? 'text-center flex flex-col items-center' : 'text-left'}`}>
       <motion.span 
         initial={{ opacity: 0, letterSpacing: '0.1em' }}
         whileInView={{ opacity: 0.4, letterSpacing: '0.25em' }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        className="text-xs uppercase font-sans text-paper-beige block mb-3"
+        className="text-[11px] uppercase font-sans text-[#D8C7A3] block mb-3"
       >
         {label}
       </motion.span>
@@ -18,7 +18,7 @@ export default function SectionTitle({ label, title, center = false }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: [0.25, 1, 0.5, 1] }}
-        className="font-serif text-3xl md:text-4xl text-paper-beige leading-tight"
+        className="font-serif text-3xl md:text-4xl text-[#F2EEE6] leading-tight max-w-2xl"
       >
         {title}
       </motion.h2>

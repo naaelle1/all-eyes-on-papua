@@ -13,7 +13,7 @@ export default function LandRightsSection() {
           <p className="text-sm font-sans font-light leading-relaxed text-soft-white/60">{left.desc}</p>
           <div className="w-full h-48 bg-[#2A1B14]/30 border border-rust-brown/10 overflow-hidden relative mt-8">
             <img 
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600" 
+              src="public\images\jnji proteksi ruang hidup.jpg" 
               alt="Archival Document Visual representation" 
               className="w-full h-full object-cover grayscale mix-blend-luminosity opacity-20"
             />
@@ -27,7 +27,7 @@ export default function LandRightsSection() {
           <p className="text-sm font-sans font-light leading-relaxed text-soft-white/60">{right.desc}</p>
           <div className="w-full h-48 bg-[#111111] border border-blood-red/10 overflow-hidden relative mt-8">
             <img 
-              src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=600" 
+              src="public\images\ekspansi hutan.jpg" 
               alt="Industrial logging site representation" 
               className="w-full h-full object-cover grayscale brightness-50 contrast-125 opacity-30"
             />

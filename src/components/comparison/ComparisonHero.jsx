@@ -9,7 +9,7 @@ export default function ComparisonHero() {
         {/* Left Side Visual (Archival Sepia Content) */}
         <div className="relative w-full h-full border-b lg:border-b-0 lg:border-r border-rust-brown/20 overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&q=80&w=1200" 
+            src="public\images\papua dulu.jpg" 
             alt="Historical Reform Archive" 
             className="w-full h-full object-cover opacity-20 filter grayscale sepia contrast-110 mix-blend-luminosity"
           />
@@ -19,7 +19,7 @@ export default function ComparisonHero() {
         {/* Right Side Visual (Industrial Cold Content) */}
         <div className="relative w-full h-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=1200" 
+            src="public\images\papua sekarang.jpg" 
             alt="Deforestation / Industrial Landscape" 
             className="w-full h-full object-cover opacity-15 filter grayscale contrast-125 brightness-50"
           />

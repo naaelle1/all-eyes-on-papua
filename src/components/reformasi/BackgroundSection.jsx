@@ -46,7 +46,7 @@ export default function BackgroundSection() {
           >
             {/* Visual simulation of an old printed layout */}
             <img 
-              src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=800" 
+              src="public\images\arsip kliping koran lama.jpeg" 
               alt="Historical Press Archive" 
               className="w-full h-auto grayscale filter contrast-130 brightness-75 mix-blend-luminosity"
             />
